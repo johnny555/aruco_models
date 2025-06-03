@@ -17,18 +17,13 @@ endif()
 # Include directories
 include_directories(${OpenCV_INCLUDE_DIRS})
 
-# Build ArUco marker generator executable
-add_executable(generate_aruco_markers_cpp src/generate_aruco_markers.cpp)
-target_link_libraries(generate_aruco_markers_cpp ${OpenCV_LIBS})
-
-# Build enhanced ArUco marker generator executable  
-add_executable(generate_aruco_markers_advanced_cpp src/generate_aruco_markers_advanced.cpp)
-target_link_libraries(generate_aruco_markers_advanced_cpp ${OpenCV_LIBS})
+# Build ArUco marker generator executable  
+add_executable(generate_aruco_markers src/generate_aruco_markers.cpp)
+target_link_libraries(generate_aruco_markers ${OpenCV_LIBS})
 
 # Install executables
 install(TARGETS
-  generate_aruco_markers_cpp
-  generate_aruco_markers_advanced_cpp
+  generate_aruco_markers
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -37,7 +32,8 @@ install(DIRECTORY
   models/
   worlds/
   launch/
-  scripts/
+  robot_description/
+  config/
   DESTINATION share/${PROJECT_NAME}/
 )
 

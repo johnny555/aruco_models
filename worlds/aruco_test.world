@@ -117,7 +117,7 @@
 
     <!-- ArUco marker 0 - Center of ceiling -->
     <include>
-      <uri>model://aruco-0</uri>
+      <uri>model://aruco_models/aruco-0</uri>
       <pose>0 0 2.99 3.14159 0 0</pose>
       <name>aruco_marker_0</name>
     </include>
