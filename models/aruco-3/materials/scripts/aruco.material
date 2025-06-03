@@ -1,0 +1,14 @@
+material ArUco/Marker3
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture aruco_003.png
+        filtering trilinear
+      }
+    }
+  }
+}
